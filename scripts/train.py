@@ -14,7 +14,7 @@ from churnzero.reporting import save_evaluation_figures
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Train banking customer churn model.")
-    parser.add_argument("--train", default="data/raw/train.csv", help="Training CSV path.")
+    parser.add_argument("--train", default="data/raw/banking.csv", help="Training CSV path.")
     parser.add_argument("--test", default=None, help="Optional test CSV path for prediction export.")
     parser.add_argument("--target", default=None, help="Target column name. Auto-detected if omitted.")
     parser.add_argument("--id-column", default=None, help="Customer ID column. Auto-detected if omitted.")

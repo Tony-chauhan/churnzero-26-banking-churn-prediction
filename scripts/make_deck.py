@@ -266,8 +266,8 @@ def make_deck(metrics: dict[str, object], out_path: Path) -> None:
         s,
         [
             "python scripts/make_sample_data.py",
-            "python scripts/train.py --train data/raw/train.csv --test data/raw/test.csv --target Exited",
-            "python scripts/predict.py --model models/churn_model.joblib --test data/raw/test.csv --out outputs/predictions.csv",
+            "python scripts/train.py --train data/raw/banking.csv --target y",
+            "python scripts/predict.py --model models/churn_model.joblib --test data/raw/banking.csv --out outputs/predictions.csv",
             "python scripts/make_deck.py",
         ],
         0.95,

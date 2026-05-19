@@ -1,66 +1,63 @@
 {
-  "roc_auc": 0.7260158965259345,
-  "average_precision": 0.2844314458142868,
-  "accuracy": 0.81625,
-  "precision": 0.3046875,
-  "recall": 0.4020618556701031,
-  "f1": 0.3466666666666667,
-  "log_loss": 0.4602390477175119,
-  "threshold": 0.5471952468123278,
+  "roc_auc": 0.9454703052030755,
+  "average_precision": 0.6475493192913897,
+  "accuracy": 0.8986404467103666,
+  "precision": 0.5327234342012667,
+  "recall": 0.8157327586206896,
+  "f1": 0.6445295870583226,
+  "log_loss": 0.2689305556496047,
+  "threshold": 0.573995488552039,
   "confusion_matrix": [
     [
-      1228,
-      178
+      6646,
+      664
     ],
     [
-      116,
-      78
+      171,
+      757
     ]
   ],
   "classification_report": {
     "0": {
-      "precision": 0.9136904761904762,
-      "recall": 0.8733997155049786,
-      "f1-score": 0.893090909090909,
-      "support": 1406.0
+      "precision": 0.9749156520463547,
+      "recall": 0.9091655266757865,
+      "f1-score": 0.9408933248389608,
+      "support": 7310.0
     },
     "1": {
-      "precision": 0.3046875,
-      "recall": 0.4020618556701031,
-      "f1-score": 0.3466666666666667,
-      "support": 194.0
+      "precision": 0.5327234342012667,
+      "recall": 0.8157327586206896,
+      "f1-score": 0.6445295870583226,
+      "support": 928.0
     },
-    "accuracy": 0.81625,
+    "accuracy": 0.8986404467103666,
     "macro avg": {
-      "precision": 0.6091889880952381,
-      "recall": 0.6377307855875409,
-      "f1-score": 0.6198787878787879,
-      "support": 1600.0
+      "precision": 0.7538195431238106,
+      "recall": 0.8624491426482381,
+      "f1-score": 0.7927114559486417,
+      "support": 8238.0
     },
     "weighted avg": {
-      "precision": 0.8398488653273809,
-      "recall": 0.81625,
-      "f1-score": 0.8268369696969696,
-      "support": 1600.0
+      "precision": 0.9251032730514237,
+      "recall": 0.8986404467103666,
+      "f1-score": 0.9075083347126641,
+      "support": 8238.0
     }
   },
-  "target_rate_train": 0.12125,
+  "target_rate_train": 0.11265417111780131,
   "data_summary": {
-    "rows": 8000,
-    "columns": 14,
+    "rows": 41188,
+    "columns": 21,
     "missing_cells": 0,
-    "duplicate_rows": 0
+    "duplicate_rows": 12
   },
-  "target_column": "Exited",
-  "id_column": "CustomerId",
-  "feature_count": 10,
-  "numeric_feature_count": 8,
-  "categorical_feature_count": 2,
+  "target_column": "y",
+  "id_column": null,
+  "feature_count": 20,
+  "numeric_feature_count": 10,
+  "categorical_feature_count": 10,
   "dropped_columns": [
-    "RowNumber",
-    "CustomerId",
-    "Surname",
-    "Exited"
+    "y"
   ],
   "figure_paths": {
     "confusion_matrix": "reports\\figures\\confusion_matrix.png",
@@ -70,54 +67,64 @@
   },
   "top_features": [
     {
-      "feature": "Age",
-      "importance_mean": 0.05454120640801452,
-      "importance_std": 0.007638217958062851
+      "feature": "duration",
+      "importance_mean": 0.27790634067034403,
+      "importance_std": 0.010860918217290046
     },
     {
-      "feature": "CreditScore",
-      "importance_mean": 0.04831280825722239,
-      "importance_std": 0.015649365988903974
+      "feature": "emp_var_rate",
+      "importance_mean": 0.028577857615402456,
+      "importance_std": 0.00747810062324323
     },
     {
-      "feature": "Geography",
-      "importance_mean": 0.03187837677942161,
-      "importance_std": 0.008837629876121874
+      "feature": "euribor3m",
+      "importance_mean": 0.02225618849162394,
+      "importance_std": 0.00913281352538422
     },
     {
-      "feature": "IsActiveMember",
-      "importance_mean": 0.02269959703715958,
-      "importance_std": 0.009328094657546419
+      "feature": "nr_employed",
+      "importance_mean": 0.02120647731455656,
+      "importance_std": 0.009966818857205437
     },
     {
-      "feature": "Balance",
-      "importance_mean": 0.021692474740251842,
-      "importance_std": 0.005006729314484263
+      "feature": "pdays",
+      "importance_mean": 0.013698140422475613,
+      "importance_std": 0.004969393872665465
     },
     {
-      "feature": "NumOfProducts",
-      "importance_mean": 0.018169411166585447,
-      "importance_std": 0.003015875618209031
+      "feature": "day_of_week",
+      "importance_mean": 0.01331469013176272,
+      "importance_std": 0.0028854082062719257
     },
     {
-      "feature": "EstimatedSalary",
-      "importance_mean": 0.00814592192295841,
-      "importance_std": 0.004309852427256707
+      "feature": "poutcome",
+      "importance_mean": 0.00923321403066386,
+      "importance_std": 0.005307592166151043
     },
     {
-      "feature": "HasCrCard",
-      "importance_mean": 0.003710013720186689,
-      "importance_std": 0.005585857344904865
+      "feature": "contact",
+      "importance_mean": 0.008326666449587128,
+      "importance_std": 0.009425029707066884
     },
     {
-      "feature": "Tenure",
-      "importance_mean": 0.0016448408106907952,
-      "importance_std": 0.008207601153915802
+      "feature": "default",
+      "importance_mean": 0.008056031358725391,
+      "importance_std": 0.0018588885091635019
     },
     {
-      "feature": "Gender",
-      "importance_mean": -0.00786932158206315,
-      "importance_std": 0.006185315636561693
+      "feature": "loan",
+      "importance_mean": 0.002182736942887198,
+      "importance_std": 0.0029340138217546496
+    },
+    {
+      "feature": "education",
+      "importance_mean": 0.001724463185409153,
+      "importance_std": 0.003781364594194769
+    },
+    {
+      "feature": "cons_price_idx",
+      "importance_mean": 9.847165645957557e-05,
+      "importance_std": 0.0016320162416976218
     }
   ]
 }

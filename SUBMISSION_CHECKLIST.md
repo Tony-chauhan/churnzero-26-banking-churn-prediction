@@ -2,9 +2,9 @@
 
 Use this before uploading on Unstop.
 
-- [ ] Put official train CSV in `data/raw/train.csv`.
-- [ ] Put official test CSV in `data/raw/test.csv`.
-- [ ] Run `python scripts/train.py --train data/raw/train.csv --test data/raw/test.csv --target <TARGET_COLUMN>`.
+- [ ] Put the official dataset in `data/raw/banking.csv`.
+- [ ] Run `python scripts/train.py --train data/raw/banking.csv --target y`.
+- [ ] Run `python scripts/predict.py --model models/churn_model.joblib --test data/raw/banking.csv --out outputs/predictions.csv`.
 - [ ] Confirm `outputs/predictions.csv` has the required ID and prediction columns.
 - [ ] Run `python scripts/make_deck.py`.
 - [ ] Review `submission/ChurnZero_26_Round2_Presentation.pptx`.

@@ -5,7 +5,7 @@ import os
 import warnings
 from pathlib import Path
 
-os.environ["LOKY_MAX_CPU_COUNT"] = str(max(1, os.cpu_count() or 1))
+os.environ["LOKY_MAX_CPU_COUNT"] = "1"
 warnings.filterwarnings("ignore", message="Could not find the number of physical cores.*")
 
 import joblib

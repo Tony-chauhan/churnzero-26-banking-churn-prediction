@@ -4,7 +4,7 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![Round 2](https://img.shields.io/badge/ChurnZero%2026-Round%202-2E7D32?style=for-the-badge)
 
-Round 2 submission for **ChurnZero 26 by IIT Kharagpur**. This repository builds a reproducible machine learning pipeline for predicting banking customer churn, exporting test-set predictions, and generating a presentation-ready case-study deck.
+Round 2 submission for **ChurnZero 26 by IIT Kharagpur**. This repository builds a reproducible machine learning pipeline for predicting banking customer churn, exporting scored predictions, and generating a presentation-ready case-study deck.
 
 ## Team
 
@@ -19,7 +19,7 @@ Round 2 submission for **ChurnZero 26 by IIT Kharagpur**. This repository builds
 - Schema-tolerant preprocessing for numeric and categorical features.
 - Soft-voting ensemble using Extra Trees and Histogram Gradient Boosting.
 - Validation metrics, feature importance, and diagnostic plots.
-- Test-set prediction export in CSV format.
+- Scored prediction export in CSV format.
 - Auto-generated Round 2 PPTX deck.
 
 ## Visual Report
@@ -37,7 +37,7 @@ Round 2 submission for **ChurnZero 26 by IIT Kharagpur**. This repository builds
 ```text
 .
 ├── data/
-│   ├── raw/                 # Place official Unstop train/test files here
+│   ├── raw/                 # Place the official banking.csv file here
 │   └── sample/              # Synthetic sample data for local verification
 ├── models/                  # Local trained model artifacts
 ├── outputs/                 # Metrics and prediction CSV outputs
@@ -76,25 +76,21 @@ python -m unittest discover -s tests
 
 ## Official Round 2 Run
 
-Place the official competition files here:
+Place the official dataset here:
 
 ```text
-data/raw/train.csv
-data/raw/test.csv
+data/raw/banking.csv
 ```
 
 Then run:
 
 ```powershell
-python scripts/train.py --train data/raw/train.csv --test data/raw/test.csv --target Exited
+python scripts/train.py --train data/raw/banking.csv --target y
+python scripts/predict.py --model models/churn_model.joblib --test data/raw/banking.csv --out outputs/predictions.csv
 python scripts/make_deck.py
 ```
 
-If the target column is not named `Exited`, replace it with the official target column:
-
-```powershell
-python scripts/train.py --train data/raw/train.csv --test data/raw/test.csv --target Churn
-```
+The banking dataset uses `y` as the target column, and the training script auto-detects it when available.
 
 ## Generated Outputs
 
@@ -126,6 +122,7 @@ Round 2 expects:
 
 - PPTX/PDF case-study presentation
 - GitHub repository link with reproducible model code
-- predictions CSV on the official test set
+- predictions CSV scored from the official banking dataset
 
 Use [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) before uploading on Unstop.
+
