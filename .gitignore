@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Competition data can be private. Keep generated sample data tracked only if desired.
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated model/report outputs.
+models/*.joblib
+outputs/*.csv
+outputs/*.json
+submission/*.pptx
+
+# Keep report images versioned so README visuals render on GitHub.
+!reports/figures/*.png
