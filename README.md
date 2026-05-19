@@ -116,6 +116,46 @@ The model treats churn as a binary classification problem and optimizes both pro
 - validation threshold selected by F1 score
 - permutation importance for explainable churn drivers
 
+## Model Performance & Evaluation
+
+The final ensemble model was evaluated using a stratified 20% validation split from the official banking dataset. The metrics below demonstrate high predictive performance and balanced decision boundaries:
+
+### Performance Metrics
+
+| Metric | Value | Description |
+| --- | --- | --- |
+| **ROC-AUC** | `0.9455` | Excellent probability ranking and separation capability. |
+| **Average Precision (PR-AUC)** | `0.6475` | Strong precision across recall thresholds on the imbalanced target. |
+| **Accuracy** | `89.86%` | Overall classification correctness. |
+| **Precision (Class 1)** | `53.27%` | Precision for predicting churners (minimizing false alarms). |
+| **Recall (Class 1)** | `81.57%` | Sensitivity to capture actual churners (capturing 81.5% of true churners). |
+| **F1-Score (Class 1)** | `0.6445` | Harmonized score balancing precision and recall. |
+| **Log Loss** | `0.2689` | Well-calibrated probabilistic outputs. |
+| **Decision Threshold** | `0.5740` | Optimally chosen threshold to maximize validation F1-score. |
+
+### Detailed Classification Report
+
+| Class | Precision | Recall | F1-Score | Support |
+| --- | --- | --- | --- | --- |
+| **0 (No Churn)** | 97.49% | 90.92% | 94.09% | 7,310 |
+| **1 (Churn)** | 53.27% | 81.57% | 64.45% | 928 |
+| **Macro Average** | 75.38% | 86.24% | 79.27% | 8,238 |
+| **Weighted Average** | 92.51% | 89.86% | 90.75% | 8,238 |
+
+### Key Churn Drivers (Permutation Importance)
+
+The model features were analyzed using Permutation Feature Importance on the validation dataset to identify the true drivers of customer churn:
+
+1. **`duration`** (Importance: `0.2779`): The length of the last customer contact in seconds. Longer call duration is the strongest predictor of customer engagement or resolution of issues.
+2. **`emp_var_rate`** (Importance: `0.0286`): Employment variation rate (macroeconomic indicator). Indicates that broader economic stability affects customer churn.
+3. **`euribor3m`** (Importance: `0.0223`): 3-month Euribor interest rate. Macroeconomic changes strongly influence financial decision-making and retention.
+4. **`nr_employed`** (Importance: `0.0212`): Number of employees (macroeconomic indicator).
+5. **`pdays`** (Importance: `0.0137`): Number of days since the customer was last contacted from a previous campaign.
+6. **`day_of_week`** (Importance: `0.0133`): The day of the week of the contact.
+7. **`poutcome`** (Importance: `0.0092`): Outcome of the previous marketing campaign.
+8. **`contact`** (Importance: `0.0083`): Contact communication type (cellular vs. telephone).
+9. **`default`** (Importance: `0.0081`): Whether the customer has credit in default.
+
 ## Submission Checklist
 
 Round 2 expects:
