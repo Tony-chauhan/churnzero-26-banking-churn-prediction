@@ -1,0 +1,123 @@
+{
+  "roc_auc": 0.7260158965259345,
+  "average_precision": 0.2844314458142868,
+  "accuracy": 0.81625,
+  "precision": 0.3046875,
+  "recall": 0.4020618556701031,
+  "f1": 0.3466666666666667,
+  "log_loss": 0.4602390477175119,
+  "threshold": 0.5471952468123278,
+  "confusion_matrix": [
+    [
+      1228,
+      178
+    ],
+    [
+      116,
+      78
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.9136904761904762,
+      "recall": 0.8733997155049786,
+      "f1-score": 0.893090909090909,
+      "support": 1406.0
+    },
+    "1": {
+      "precision": 0.3046875,
+      "recall": 0.4020618556701031,
+      "f1-score": 0.3466666666666667,
+      "support": 194.0
+    },
+    "accuracy": 0.81625,
+    "macro avg": {
+      "precision": 0.6091889880952381,
+      "recall": 0.6377307855875409,
+      "f1-score": 0.6198787878787879,
+      "support": 1600.0
+    },
+    "weighted avg": {
+      "precision": 0.8398488653273809,
+      "recall": 0.81625,
+      "f1-score": 0.8268369696969696,
+      "support": 1600.0
+    }
+  },
+  "target_rate_train": 0.12125,
+  "data_summary": {
+    "rows": 8000,
+    "columns": 14,
+    "missing_cells": 0,
+    "duplicate_rows": 0
+  },
+  "target_column": "Exited",
+  "id_column": "CustomerId",
+  "feature_count": 10,
+  "numeric_feature_count": 8,
+  "categorical_feature_count": 2,
+  "dropped_columns": [
+    "RowNumber",
+    "CustomerId",
+    "Surname",
+    "Exited"
+  ],
+  "figure_paths": {
+    "confusion_matrix": "reports\\figures\\confusion_matrix.png",
+    "roc_curve": "reports\\figures\\roc_curve.png",
+    "precision_recall_curve": "reports\\figures\\precision_recall_curve.png",
+    "feature_importance": "reports\\figures\\feature_importance.png"
+  },
+  "top_features": [
+    {
+      "feature": "Age",
+      "importance_mean": 0.05454120640801452,
+      "importance_std": 0.007638217958062851
+    },
+    {
+      "feature": "CreditScore",
+      "importance_mean": 0.04831280825722239,
+      "importance_std": 0.015649365988903974
+    },
+    {
+      "feature": "Geography",
+      "importance_mean": 0.03187837677942161,
+      "importance_std": 0.008837629876121874
+    },
+    {
+      "feature": "IsActiveMember",
+      "importance_mean": 0.02269959703715958,
+      "importance_std": 0.009328094657546419
+    },
+    {
+      "feature": "Balance",
+      "importance_mean": 0.021692474740251842,
+      "importance_std": 0.005006729314484263
+    },
+    {
+      "feature": "NumOfProducts",
+      "importance_mean": 0.018169411166585447,
+      "importance_std": 0.003015875618209031
+    },
+    {
+      "feature": "EstimatedSalary",
+      "importance_mean": 0.00814592192295841,
+      "importance_std": 0.004309852427256707
+    },
+    {
+      "feature": "HasCrCard",
+      "importance_mean": 0.003710013720186689,
+      "importance_std": 0.005585857344904865
+    },
+    {
+      "feature": "Tenure",
+      "importance_mean": 0.0016448408106907952,
+      "importance_std": 0.008207601153915802
+    },
+    {
+      "feature": "Gender",
+      "importance_mean": -0.00786932158206315,
+      "importance_std": 0.006185315636561693
+    }
+  ]
+}
