@@ -1,63 +1,64 @@
 {
-  "roc_auc": 0.9454703052030755,
-  "average_precision": 0.6475493192913897,
-  "accuracy": 0.8986404467103666,
-  "precision": 0.5327234342012667,
-  "recall": 0.8157327586206896,
-  "f1": 0.6445295870583226,
-  "log_loss": 0.2689305556496047,
-  "threshold": 0.573995488552039,
+  "roc_auc": 0.9999126662159117,
+  "average_precision": 0.9995539213076825,
+  "accuracy": 0.9975323874151758,
+  "precision": 0.9961389961389961,
+  "recall": 0.9885057471264368,
+  "f1": 0.9923076923076923,
+  "log_loss": 0.05293605379863033,
+  "threshold": 0.536921346711462,
   "confusion_matrix": [
     [
-      6646,
-      664
+      1359,
+      1
     ],
     [
-      171,
-      757
+      3,
+      258
     ]
   ],
   "classification_report": {
     "0": {
-      "precision": 0.9749156520463547,
-      "recall": 0.9091655266757865,
-      "f1-score": 0.9408933248389608,
-      "support": 7310.0
+      "precision": 0.9977973568281938,
+      "recall": 0.9992647058823529,
+      "f1-score": 0.9985304922850845,
+      "support": 1360.0
     },
     "1": {
-      "precision": 0.5327234342012667,
-      "recall": 0.8157327586206896,
-      "f1-score": 0.6445295870583226,
-      "support": 928.0
+      "precision": 0.9961389961389961,
+      "recall": 0.9885057471264368,
+      "f1-score": 0.9923076923076923,
+      "support": 261.0
     },
-    "accuracy": 0.8986404467103666,
+    "accuracy": 0.9975323874151758,
     "macro avg": {
-      "precision": 0.7538195431238106,
-      "recall": 0.8624491426482381,
-      "f1-score": 0.7927114559486417,
-      "support": 8238.0
+      "precision": 0.9969681764835949,
+      "recall": 0.9938852265043949,
+      "f1-score": 0.9954190922963884,
+      "support": 1621.0
     },
     "weighted avg": {
-      "precision": 0.9251032730514237,
-      "recall": 0.8986404467103666,
-      "f1-score": 0.9075083347126641,
-      "support": 8238.0
+      "precision": 0.9975303413193225,
+      "recall": 0.9975323874151758,
+      "f1-score": 0.9975285485502915,
+      "support": 1621.0
     }
   },
-  "target_rate_train": 0.11265417111780131,
+  "target_rate_train": 0.1607208986544871,
   "data_summary": {
-    "rows": 41188,
-    "columns": 21,
-    "missing_cells": 0,
-    "duplicate_rows": 12
+    "rows": 8101,
+    "columns": 98,
+    "missing_cells": 4541,
+    "duplicate_rows": 0
   },
-  "target_column": "y",
-  "id_column": null,
-  "feature_count": 20,
-  "numeric_feature_count": 10,
-  "categorical_feature_count": 10,
+  "target_column": "churn",
+  "id_column": "customer_id",
+  "feature_count": 96,
+  "numeric_feature_count": 81,
+  "categorical_feature_count": 15,
   "dropped_columns": [
-    "y"
+    "customer_id",
+    "churn"
   ],
   "figure_paths": {
     "confusion_matrix": "reports\\figures\\confusion_matrix.png",
@@ -67,64 +68,64 @@
   },
   "top_features": [
     {
-      "feature": "duration",
-      "importance_mean": 0.27790634067034403,
-      "importance_std": 0.010860918217290046
+      "feature": "balance_decline_percentage",
+      "importance_mean": 0.06759827344175603,
+      "importance_std": 0.005985951693353169
     },
     {
-      "feature": "emp_var_rate",
-      "importance_mean": 0.028577857615402456,
-      "importance_std": 0.00747810062324323
+      "feature": "unresolved_complaint_count",
+      "importance_mean": 0.002007764949315116,
+      "importance_std": 0.00025358756770910916
     },
     {
-      "feature": "euribor3m",
-      "importance_mean": 0.02225618849162394,
-      "importance_std": 0.00913281352538422
+      "feature": "campaign_response_count",
+      "importance_mean": 0.0009746637237786571,
+      "importance_std": 0.0004878736639459178
     },
     {
-      "feature": "nr_employed",
-      "importance_mean": 0.02120647731455656,
-      "importance_std": 0.009966818857205437
+      "feature": "relationship_manager_interaction_count",
+      "importance_mean": 0.000770508833544481,
+      "importance_std": 0.00026609508614047
     },
     {
-      "feature": "pdays",
-      "importance_mean": 0.013698140422475613,
-      "importance_std": 0.004969393872665465
+      "feature": "total_trans_count",
+      "importance_mean": 0.0007704695547523288,
+      "importance_std": 0.00024672820749540973
     },
     {
-      "feature": "day_of_week",
-      "importance_mean": 0.01331469013176272,
-      "importance_std": 0.0028854082062719257
+      "feature": "customer_feedback_sentiment",
+      "importance_mean": 0.0006797191821110937,
+      "importance_std": 0.00042553702015148896
     },
     {
-      "feature": "poutcome",
-      "importance_mean": 0.00923321403066386,
-      "importance_std": 0.005307592166151043
+      "feature": "competitor_bank_offer_awareness",
+      "importance_mean": 0.0006425343878531331,
+      "importance_std": 0.00026233630754174224
     },
     {
-      "feature": "contact",
-      "importance_mean": 0.008326666449587128,
-      "importance_std": 0.009425029707066884
+      "feature": "retention_offer_received",
+      "importance_mean": 0.0006093792683279364,
+      "importance_std": 0.0001235630748553739
     },
     {
-      "feature": "default",
-      "importance_mean": 0.008056031358725391,
-      "importance_std": 0.0018588885091635019
+      "feature": "minimum_due_paid_flag",
+      "importance_mean": 0.0005193650462459454,
+      "importance_std": 8.331143651642122e-05
     },
     {
-      "feature": "loan",
-      "importance_mean": 0.002182736942887198,
-      "importance_std": 0.0029340138217546496
+      "feature": "total_digital_logins",
+      "importance_mean": 0.0004367346753837875,
+      "importance_std": 0.00039669275566075454
     },
     {
-      "feature": "education",
-      "importance_mean": 0.001724463185409153,
-      "importance_std": 0.003781364594194769
+      "feature": "total_revolving_bal",
+      "importance_mean": 0.0003065625855001253,
+      "importance_std": 0.0001490756547125988
     },
     {
-      "feature": "cons_price_idx",
-      "importance_mean": 9.847165645957557e-05,
-      "importance_std": 0.0016320162416976218
+      "feature": "cash_withdrawal_count",
+      "importance_mean": 0.0002694466191562217,
+      "importance_std": 0.00010185858895363444
     }
   ]
 }
