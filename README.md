@@ -155,14 +155,3 @@ The model features were analyzed using Permutation Feature Importance on the val
 6. **`customer_feedback_sentiment`** (Importance: `0.0007`): Sentiment analysis score of customer feedback.
 7. **`competitor_bank_offer_awareness`** (Importance: `0.0006`): Customer's awareness of competitor offers.
 8. **`retention_offer_received`** (Importance: `0.0006`): Whether the customer has received a retention offer.
-
-## Submission Checklist
-
-Round 2 expects:
-
-- PPTX/PDF case-study presentation
-- GitHub repository link with reproducible model code
-- predictions CSV scored from the official banking dataset
-
-Use [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) before uploading on Unstop.
-
